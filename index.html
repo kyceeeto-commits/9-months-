@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>lovely 9 months with u ♡</title>
+<title>9 lovely months with u ♡</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap');
@@ -23,10 +23,10 @@ body {
 body {
     overflow-x: hidden;
     background:
-        radial-gradient(circle at 15% 15%, rgba(255,255,255,.95), transparent 25%),
-        radial-gradient(circle at 85% 75%, rgba(249,194,211,.42), transparent 30%),
-        linear-gradient(135deg, #fffafc, #fceef3, #f7e7ed);
-    color: #684d59;
+        radial-gradient(circle at 15% 10%, #ffffff 0%, transparent 28%),
+        radial-gradient(circle at 85% 80%, #f7dce6 0%, transparent 32%),
+        linear-gradient(135deg, #fffafd, #f9edf2 48%, #f5e4eb);
+    color: #654c58;
     font-family: 'DM Sans', sans-serif;
 }
 
@@ -44,23 +44,23 @@ body {
 
 .bg-heart {
     position: absolute;
-    color: #d995ac;
-    opacity: .23;
+    color: #d58da5;
+    opacity: .18;
     animation: floatHeart linear infinite;
 }
 
 @keyframes floatHeart {
-    0% {
+    from {
         transform: translateY(110vh) rotate(0deg);
     }
 
-    100% {
+    to {
         transform: translateY(-15vh) rotate(360deg);
     }
 }
 
 /* =========================================
-   SCREEN SYSTEM
+   PAGE SYSTEM
 ========================================= */
 
 .screen {
@@ -76,7 +76,7 @@ body {
 
 .screen.active {
     display: flex;
-    animation: pageIn .9s ease forwards;
+    animation: pageIn .8s ease forwards;
 }
 
 @keyframes pageIn {
@@ -92,11 +92,11 @@ body {
 }
 
 /* =========================================
-   INTRO
+   INTRO PAGE
 ========================================= */
 
 .intro-container {
-    width: min(100%, 900px);
+    width: min(100%, 950px);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -104,345 +104,604 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
+    padding-top: 20px;
 }
 
-.eyebrow {
+.intro-small {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(18px, 3vw, 24px);
+    font-size: clamp(18px, 3vw, 25px);
     letter-spacing: 5px;
-    color: #ae8190;
-    margin-bottom: 5px;
+    color: #a77a89;
+    margin-bottom: 4px;
 }
 
 .main-title {
     font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(53px, 10vw, 92px);
+    line-height: .88;
     font-weight: 500;
-    font-size: clamp(48px, 9vw, 88px);
-    line-height: .9;
-    color: #704d5b;
-    text-shadow: 0 5px 25px rgba(120,75,92,.08);
+    color: #684b58;
+    text-shadow: 0 8px 30px rgba(91,55,69,.08);
 }
 
 .main-title span {
-    color: #a9647d;
+    color: #a65f79;
 }
 
-.intro-note {
+.subtitle {
     margin-top: 15px;
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #a37b88;
+    color: #a47c89;
+    font-size: 11px;
+    letter-spacing: 3px;
 }
 
 /* =========================================
-   3D BOUQUET
+   REALISTIC BOUQUET
 ========================================= */
 
-.bouquet {
+.bouquet-scene {
     position: relative;
-    width: min(95vw, 650px);
-    height: 420px;
-    margin-top: -8px;
+    width: min(96vw, 700px);
+    height: 430px;
+    margin-top: -10px;
     margin-bottom: -55px;
-    perspective: 1100px;
+    perspective: 1200px;
+}
+
+.bouquet {
+    position: absolute;
+    inset: 0;
     transform-style: preserve-3d;
     animation: bouquetFloat 5s ease-in-out infinite;
 }
 
 @keyframes bouquetFloat {
     0%, 100% {
-        transform: translateY(0) rotateY(-2deg);
+        transform: translateY(0) rotateY(-1deg);
     }
 
     50% {
-        transform: translateY(-9px) rotateY(2deg);
+        transform: translateY(-8px) rotateY(1deg);
     }
 }
 
-.flower {
-    position: absolute;
-    width: 125px;
-    height: 125px;
-    transform-style: preserve-3d;
-    filter: drop-shadow(0 13px 12px rgba(95,55,70,.12));
-}
-
-.flower:nth-child(1) {
-    left: 13%;
-    top: 28%;
-    transform: scale(.88) rotate(-12deg);
-}
-
-.flower:nth-child(2) {
-    left: 35%;
-    top: 7%;
-    transform: scale(1.05);
-}
-
-.flower:nth-child(3) {
-    left: 59%;
-    top: 25%;
-    transform: scale(.92) rotate(13deg);
-}
-
-.flower:nth-child(4) {
-    left: 27%;
-    top: 45%;
-    transform: scale(.77) rotate(-17deg);
-}
-
-.flower:nth-child(5) {
-    left: 49%;
-    top: 46%;
-    transform: scale(.8) rotate(15deg);
-}
-
-.petal {
-    position: absolute;
-    width: 54px;
-    height: 74px;
-    left: 35px;
-    top: 22px;
-    border-radius: 65% 65% 48% 48%;
-    transform-origin: 50% 88%;
-
-    box-shadow:
-        inset -7px -9px 14px rgba(0,0,0,.07),
-        inset 7px 7px 15px rgba(255,255,255,.45),
-        0 4px 8px rgba(110,65,80,.08);
-}
-
-.petal:nth-child(1) {
-    transform: rotate(0deg) translateY(-24px);
-}
-
-.petal:nth-child(2) {
-    transform: rotate(72deg) translateY(-24px);
-}
-
-.petal:nth-child(3) {
-    transform: rotate(144deg) translateY(-24px);
-}
-
-.petal:nth-child(4) {
-    transform: rotate(216deg) translateY(-24px);
-}
-
-.petal:nth-child(5) {
-    transform: rotate(288deg) translateY(-24px);
-}
-
-.flower-pink .petal {
-    background:
-        radial-gradient(circle at 35% 20%, rgba(255,255,255,.5), transparent 30%),
-        linear-gradient(145deg, #fac4d5, #df809f);
-}
-
-.flower-white .petal {
-    background:
-        radial-gradient(circle at 35% 20%, white, transparent 35%),
-        linear-gradient(145deg, #fff, #ead9e0);
-}
-
-.flower-peach .petal {
-    background:
-        radial-gradient(circle at 35% 20%, rgba(255,255,255,.55), transparent 30%),
-        linear-gradient(145deg, #ffd8c5, #ed9b83);
-}
-
-.flower-lavender .petal {
-    background:
-        radial-gradient(circle at 35% 20%, rgba(255,255,255,.55), transparent 30%),
-        linear-gradient(145deg, #e6d0f2, #b796d0);
-}
-
-.flower-rose .petal {
-    background:
-        radial-gradient(circle at 35% 20%, rgba(255,255,255,.5), transparent 30%),
-        linear-gradient(145deg, #efa9c1, #d66c91);
-}
-
-.flower-center {
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    left: 45px;
-    top: 45px;
-    border-radius: 50%;
-    background:
-        radial-gradient(circle, #fff2bc 5%, #e5ad55 38%, #c98739 75%);
-    z-index: 20;
-    box-shadow:
-        inset 0 2px 5px rgba(255,255,255,.65),
-        0 3px 8px rgba(110,65,60,.12);
-}
-
-.flower-center::after {
-    content: "✦";
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    color: #fff8dc;
-    font-size: 14px;
-}
+/* stems */
 
 .stem {
     position: absolute;
+    bottom: 72px;
+    left: 50%;
     width: 6px;
     height: 270px;
-    left: 59px;
-    top: 76px;
-    background:
-        linear-gradient(to right, #58724e, #91a984, #59774e);
     border-radius: 20px;
-    transform-origin: top;
-    z-index: -5;
+    background: linear-gradient(
+        90deg,
+        #405f48,
+        #78956e,
+        #496b50
+    );
+    transform-origin: bottom;
+    z-index: 1;
 }
+
+.stem.s1 {
+    transform: translateX(-50%) rotate(-18deg);
+    height: 285px;
+}
+
+.stem.s2 {
+    transform: translateX(-50%) rotate(-10deg);
+    height: 300px;
+}
+
+.stem.s3 {
+    transform: translateX(-50%) rotate(0deg);
+    height: 320px;
+}
+
+.stem.s4 {
+    transform: translateX(-50%) rotate(10deg);
+    height: 295px;
+}
+
+.stem.s5 {
+    transform: translateX(-50%) rotate(18deg);
+    height: 275px;
+}
+
+.stem.s6 {
+    transform: translateX(-50%) rotate(-30deg);
+    height: 245px;
+}
+
+/* leaves */
 
 .leaf {
     position: absolute;
-    width: 65px;
-    height: 30px;
-    background:
-        linear-gradient(145deg, #a8bb9b, #607b59);
+    width: 95px;
+    height: 42px;
     border-radius: 100% 0 100% 0;
-    z-index: -2;
-    box-shadow: inset 3px 3px 6px rgba(255,255,255,.25);
+    background:
+        linear-gradient(
+            135deg,
+            #a5bd9d,
+            #66835d 58%,
+            #486447
+        );
+    box-shadow:
+        inset 5px 5px 8px rgba(255,255,255,.25),
+        0 5px 8px rgba(60,85,55,.12);
+    z-index: 5;
 }
 
-.leaf.one {
-    left: -8px;
-    top: 190px;
-    transform: rotate(24deg);
+.leaf::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background: rgba(255,255,255,.28);
+    left: 10%;
+    top: 50%;
+    transform: rotate(-17deg);
 }
 
-.leaf.two {
-    right: -10px;
-    top: 145px;
-    transform: rotate(-28deg) scaleX(-1);
+.leaf.l1 {
+    left: 23%;
+    bottom: 135px;
+    transform: rotate(30deg);
 }
 
-/* bouquet wrapper */
+.leaf.l2 {
+    left: 34%;
+    bottom: 105px;
+    transform: rotate(-18deg) scaleX(-1);
+}
+
+.leaf.l3 {
+    left: 49%;
+    bottom: 122px;
+    transform: rotate(22deg);
+}
+
+.leaf.l4 {
+    left: 57%;
+    bottom: 155px;
+    transform: rotate(-27deg) scaleX(-1);
+}
+
+.leaf.l5 {
+    left: 42%;
+    bottom: 195px;
+    transform: rotate(18deg);
+}
+
+/* =========================================
+   ROSE FLOWERS
+========================================= */
+
+.rose {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    z-index: 20;
+    filter: drop-shadow(0 15px 15px rgba(89,53,68,.15));
+}
+
+.rose.r1 {
+    left: 14%;
+    top: 29%;
+    transform: scale(.88) rotate(-8deg);
+}
+
+.rose.r2 {
+    left: 31%;
+    top: 5%;
+    transform: scale(1.08);
+}
+
+.rose.r3 {
+    left: 53%;
+    top: 9%;
+    transform: scale(.96) rotate(7deg);
+}
+
+.rose.r4 {
+    left: 68%;
+    top: 30%;
+    transform: scale(.78) rotate(11deg);
+}
+
+.rose.r5 {
+    left: 39%;
+    top: 31%;
+    transform: scale(.8) rotate(-4deg);
+}
+
+/* petals */
+
+.rose-petal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 72px;
+    height: 84px;
+    margin-left: -36px;
+    margin-top: -42px;
+
+    border-radius:
+        55% 55% 48% 48% /
+        65% 65% 42% 42%;
+
+    transform-origin: 50% 85%;
+
+    box-shadow:
+        inset -8px -8px 14px rgba(115,45,69,.12),
+        inset 8px 7px 13px rgba(255,255,255,.38),
+        0 3px 7px rgba(90,45,65,.09);
+}
+
+/* petal positions */
+
+.rose-petal:nth-child(1) {
+    transform: rotate(0deg) translateY(-29px) scale(.95);
+}
+
+.rose-petal:nth-child(2) {
+    transform: rotate(45deg) translateY(-28px);
+}
+
+.rose-petal:nth-child(3) {
+    transform: rotate(90deg) translateY(-29px);
+}
+
+.rose-petal:nth-child(4) {
+    transform: rotate(135deg) translateY(-28px);
+}
+
+.rose-petal:nth-child(5) {
+    transform: rotate(180deg) translateY(-29px);
+}
+
+.rose-petal:nth-child(6) {
+    transform: rotate(225deg) translateY(-28px);
+}
+
+.rose-petal:nth-child(7) {
+    transform: rotate(270deg) translateY(-29px);
+}
+
+.rose-petal:nth-child(8) {
+    transform: rotate(315deg) translateY(-28px);
+}
+
+/* colors */
+
+.pink .rose-petal {
+    background:
+        radial-gradient(
+            circle at 35% 20%,
+            rgba(255,255,255,.55),
+            transparent 25%
+        ),
+        linear-gradient(
+            145deg,
+            #ffd2df,
+            #e98da9 58%,
+            #c96888
+        );
+}
+
+.blush .rose-petal {
+    background:
+        radial-gradient(
+            circle at 35% 20%,
+            rgba(255,255,255,.6),
+            transparent 25%
+        ),
+        linear-gradient(
+            145deg,
+            #ffe1e8,
+            #efa9bc 60%,
+            #d9829e
+        );
+}
+
+.cream .rose-petal {
+    background:
+        radial-gradient(
+            circle at 35% 20%,
+            #ffffff,
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            #fffefa,
+            #f3e4e5 65%,
+            #dcc5cc
+        );
+}
+
+.peach .rose-petal {
+    background:
+        radial-gradient(
+            circle at 35% 20%,
+            rgba(255,255,255,.6),
+            transparent 25%
+        ),
+        linear-gradient(
+            145deg,
+            #ffe0cf,
+            #efa98e 60%,
+            #d97f70
+        );
+}
+
+.lilac .rose-petal {
+    background:
+        radial-gradient(
+            circle at 35% 20%,
+            rgba(255,255,255,.55),
+            transparent 25%
+        ),
+        linear-gradient(
+            145deg,
+            #f0def5,
+            #c6a4d4 60%,
+            #9f78b3
+        );
+}
+
+/* rose centers */
+
+.rose-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 47px;
+    height: 47px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 50;
+
+    background:
+        radial-gradient(
+            circle at 38% 32%,
+            #fff3b5 0 7%,
+            #e9b755 24%,
+            #ca8335 58%,
+            #a9652e 100%
+        );
+
+    box-shadow:
+        inset 2px 3px 6px rgba(255,255,255,.55),
+        0 3px 7px rgba(90,50,40,.12);
+}
+
+.rose-center::before,
+.rose-center::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,231,155,.65);
+}
+
+.rose-center::before {
+    width: 9px;
+    height: 9px;
+    left: 10px;
+    top: 9px;
+}
+
+.rose-center::after {
+    width: 6px;
+    height: 6px;
+    right: 9px;
+    bottom: 10px;
+}
+
+/* little filler flowers */
+
+.filler {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
+    box-shadow:
+        0 0 0 5px rgba(255,255,255,.22),
+        0 4px 8px rgba(80,50,60,.1);
+    z-index: 15;
+}
+
+.filler::before,
+.filler::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: inherit;
+}
+
+.filler::before {
+    transform: translateX(-8px);
+}
+
+.filler::after {
+    transform: translateX(8px);
+}
+
+.f1 {
+    left: 28%;
+    top: 30%;
+}
+
+.f2 {
+    left: 67%;
+    top: 25%;
+}
+
+.f3 {
+    left: 23%;
+    top: 48%;
+}
+
+.f4 {
+    left: 73%;
+    top: 47%;
+}
+
+.f5 {
+    left: 56%;
+    top: 35%;
+}
+
+/* wrapping paper */
 
 .wrapper {
     position: absolute;
-    width: 235px;
-    height: 155px;
-    bottom: 5px;
+    bottom: 0;
     left: 50%;
+    width: 285px;
+    height: 175px;
     transform:
         translateX(-50%)
-        perspective(500px)
+        perspective(600px)
         rotateX(-5deg);
 
     background:
-        linear-gradient(135deg, #e9bdcb, #c57f98);
+        linear-gradient(
+            135deg,
+            #f2d4de,
+            #d89aad 52%,
+            #bf718d
+        );
 
     clip-path:
-        polygon(8% 0, 92% 0, 100% 100%, 0 100%);
+        polygon(
+            5% 0,
+            95% 0,
+            100% 100%,
+            0 100%
+        );
 
-    z-index: 40;
+    z-index: 80;
 
     box-shadow:
-        0 20px 35px rgba(110,65,80,.16);
+        0 25px 30px rgba(90,50,65,.16);
 }
 
 .wrapper::before {
     content: "";
     position: absolute;
-    width: 50px;
-    height: 190px;
-    left: 92px;
-    top: -25px;
-    background: rgba(255,255,255,.2);
-    transform: rotate(10deg);
-}
-
-.wrapper-ribbon {
-    position: absolute;
-    width: 13px;
-    height: 165px;
-    left: 111px;
-    top: -8px;
-    background: rgba(255,255,255,.3);
-    z-index: 42;
-}
-
-.wrapper-bow {
-    position: absolute;
     width: 60px;
-    height: 30px;
-    left: 87px;
+    height: 205px;
+    left: 105px;
     top: -18px;
-    z-index: 45;
+
+    background: rgba(255,255,255,.2);
+    transform: rotate(9deg);
 }
 
-.wrapper-bow::before,
-.wrapper-bow::after {
+.wrapper::after {
     content: "";
     position: absolute;
-    width: 38px;
-    height: 27px;
-    border: 5px solid rgba(255,255,255,.8);
-    border-radius: 70% 30% 70% 30%;
+    width: 14px;
+    height: 190px;
+    left: 136px;
+    top: -8px;
+
+    background: rgba(255,255,255,.28);
 }
 
-.wrapper-bow::before {
-    left: -21px;
-    transform: rotate(25deg);
+.ribbon {
+    position: absolute;
+    width: 72px;
+    height: 38px;
+    left: 107px;
+    top: -18px;
+    z-index: 90;
 }
 
-.wrapper-bow::after {
-    right: -21px;
-    transform: rotate(-25deg) scaleX(-1);
+.ribbon::before,
+.ribbon::after {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 34px;
+    border: 7px solid rgba(255,255,255,.78);
+    border-radius: 75% 25% 75% 25%;
+}
+
+.ribbon::before {
+    left: -27px;
+    transform: rotate(24deg);
+}
+
+.ribbon::after {
+    right: -27px;
+    transform: rotate(-24deg) scaleX(-1);
+}
+
+.ribbon-knot {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 24px;
+    top: 7px;
+    border-radius: 50%;
+    background: #fff3f5;
+    z-index: 92;
 }
 
 /* =========================================
-   OPENING LETTER
+   ENVELOPE
 ========================================= */
 
 .envelope-area {
     position: relative;
-    z-index: 100;
-    margin-top: -65px;
+    z-index: 200;
+    margin-top: -70px;
 }
 
 .envelope {
-    width: 260px;
-    height: 168px;
     position: relative;
+    width: 270px;
+    height: 175px;
     cursor: pointer;
-    filter:
-        drop-shadow(0 18px 25px rgba(100,65,78,.18));
-    transition: transform .4s ease;
+    transition: transform .35s ease;
+    filter: drop-shadow(0 18px 25px rgba(88,50,67,.18));
 }
 
 .envelope:hover {
-    transform: translateY(-8px) scale(1.03);
+    transform: translateY(-7px) scale(1.025);
 }
 
 .envelope-back {
     position: absolute;
     inset: 0;
-    background: #f3d5df;
-    border-radius: 6px;
+    background: #efd1dc;
+    border-radius: 7px;
 }
 
 .envelope-front {
     position: absolute;
     inset: 0;
-    background: #e9c0cf;
+    z-index: 5;
+
+    background: #e7bdcc;
+
     clip-path:
         polygon(
             0 0,
-            50% 55%,
+            50% 57%,
             100% 0,
             100% 100%,
             0 100%
         );
-    border-radius: 6px;
-    z-index: 3;
+
+    border-radius: 7px;
 }
 
 .envelope-flap {
@@ -450,18 +709,22 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    height: 108px;
-    background: #f9e1e8;
+    height: 112px;
+
+    background: #f8e0e7;
+
     clip-path:
         polygon(
             0 0,
             100% 0,
-            50% 72%
+            50% 74%
         );
+
     transform-origin: top;
     transition:
         transform .9s cubic-bezier(.68,-.55,.27,1.55);
-    z-index: 5;
+
+    z-index: 8;
 }
 
 .envelope.open .envelope-flap {
@@ -470,13 +733,12 @@ body {
 
 .letter {
     position: absolute;
-    width: 210px;
-    height: 130px;
     left: 25px;
-    top: 19px;
+    top: 20px;
+    width: 220px;
+    height: 135px;
+
     background: #fffdfb;
-    border-radius: 5px;
-    z-index: 2;
 
     display: flex;
     align-items: center;
@@ -485,8 +747,11 @@ body {
     text-align: center;
     padding: 15px;
 
-    box-shadow:
-        0 5px 15px rgba(0,0,0,.07);
+    border-radius: 5px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+
+    z-index: 2;
 
     transition:
         top 1s ease,
@@ -496,26 +761,26 @@ body {
 .envelope.open .letter {
     top: -100px;
     transform: scale(1.06);
-    z-index: 10;
+    z-index: 20;
 }
 
 .letter-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    color: #805766;
+    font-size: 25px;
+    color: #7c5364;
 }
 
 .click-text {
     margin-top: 17px;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 3px;
-    color: #a17987;
-    animation: pulse 1.7s infinite;
+    color: #9d7180;
+    animation: pulse 1.6s infinite;
 }
 
 @keyframes pulse {
-    0%, 100% {
-        opacity: .45;
+    0%,100% {
+        opacity: .4;
     }
 
     50% {
@@ -524,120 +789,142 @@ body {
 }
 
 /* =========================================
-   INTRO LOVE MESSAGE
-========================================= */
-
-.intro-love-message {
-    width: min(90vw, 690px);
-    margin-top: 25px;
-    margin-bottom: 25px;
-
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(20px, 3vw, 27px);
-    line-height: 1.45;
-
-    color: #694d59;
-    white-space: pre-line;
-}
-
-.bloom-message {
-    display: none;
-    margin-top: 20px;
-}
-
-.bloom-message.show {
-    display: block;
-    animation: fadeUp .9s ease;
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =========================================
-   PERSONALIZED IMAGE PAGE
+   PERSONALIZED PAGE
 ========================================= */
 
 .personalized-page {
-    width: min(94vw, 850px);
+    width: min(95vw, 850px);
     text-align: center;
 }
 
-.personalized-label {
-    font-size: 11px;
+.small-label {
+    font-size: 10px;
     letter-spacing: 4px;
-    color: #ad8390;
-    margin-bottom: 8px;
+    color: #aa7b8b;
     text-transform: uppercase;
+    margin-bottom: 7px;
 }
 
-.personalized-title {
+.page-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(38px, 7vw, 65px);
+    font-size: clamp(42px, 8vw, 68px);
     font-weight: 500;
-    color: #704f5c;
+    color: #6e4d5b;
     margin-bottom: 22px;
 }
 
 .personalized-frame {
-    position: relative;
     display: inline-block;
-    padding: 12px 12px 55px;
+    position: relative;
+    padding: 12px 12px 57px;
+
     background: #fffdfb;
 
     box-shadow:
-        0 25px 60px rgba(90,58,70,.17),
-        0 5px 15px rgba(90,58,70,.08);
+        0 25px 60px rgba(80,45,60,.17),
+        0 4px 15px rgba(80,45,60,.08);
 
     transform: rotate(-1deg);
 }
 
-.personalized-frame::before,
+.personalized-frame::before {
+    content: "♡";
+    position: absolute;
+    top: 12px;
+    left: 17px;
+    color: #c57b94;
+    font-size: 21px;
+}
+
 .personalized-frame::after {
     content: "♡";
     position: absolute;
-    color: #c9859d;
-    font-size: 22px;
-}
-
-.personalized-frame::before {
-    top: 10px;
-    left: 13px;
-}
-
-.personalized-frame::after {
     bottom: 13px;
-    right: 16px;
+    right: 18px;
+    color: #c57b94;
+    font-size: 21px;
 }
 
 .personalized-frame img {
     display: block;
     width: min(88vw, 650px);
-    max-height: 68vh;
+    max-height: 67vh;
     object-fit: contain;
 }
 
 .personalized-caption {
     position: absolute;
     bottom: 16px;
-    left: 0;
     width: 100%;
+    left: 0;
+
     font-family: 'Cormorant Garamond', serif;
     font-size: 21px;
-    color: #805766;
+    color: #7c5664;
 }
 
-.personalized-page .next-btn {
+/* =========================================
+   PHOTO PAGES
+========================================= */
+
+.photo-page {
+    width: min(95vw, 850px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.photo-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    color: #a37584;
+    margin-bottom: 11px;
+}
+
+.photo-frame {
+    position: relative;
+    width: min(92vw, 650px);
+    padding: 13px 13px 61px;
+
+    background: #fffdfb;
+
+    box-shadow:
+        0 25px 55px rgba(80,45,60,.16),
+        0 4px 12px rgba(80,45,60,.08);
+
+    transform: rotate(-1deg);
+}
+
+.photo-frame img {
     display: block;
-    margin: 28px auto 0;
+    width: 100%;
+    max-height: 57vh;
+    object-fit: contain;
+    background: #f7edf1;
+}
+
+.photo-frame::after {
+    content: "";
+    position: absolute;
+    bottom: 22px;
+    left: 15%;
+    width: 70%;
+    height: 1px;
+    background: #ead5dc;
+}
+
+.message {
+    width: min(92vw, 700px);
+    margin-top: 28px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(19px, 3vw, 25px);
+    line-height: 1.45;
+
+    color: #644a56;
+
+    white-space: pre-line;
 }
 
 /* =========================================
@@ -649,98 +936,25 @@ body {
     cursor: pointer;
 
     padding: 12px 28px;
-    margin-top: 22px;
+    margin-top: 23px;
 
     border-radius: 100px;
 
-    background: rgba(255,255,255,.8);
-    color: #82596a;
-
-    box-shadow:
-        0 8px 22px rgba(90,58,70,.1);
+    background: rgba(255,255,255,.82);
+    color: #805669;
 
     font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
 
-    transition: .3s;
+    box-shadow:
+        0 8px 22px rgba(80,45,60,.1);
+
+    transition: .3s ease;
 }
 
 .next-btn:hover {
     transform: translateY(-3px);
-    background: #fff;
-}
-
-/* =========================================
-   PHOTO PAGES
-========================================= */
-
-.photo-page {
-    width: min(95vw, 820px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.photo-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 21px;
-    color: #a27887;
-    margin-bottom: 10px;
-}
-
-.photo-frame {
-    position: relative;
-    width: min(92vw, 650px);
-
-    padding:
-        14px
-        14px
-        62px;
-
-    background: #fffdfb;
-
-    box-shadow:
-        0 25px 55px rgba(90,58,70,.16),
-        0 4px 10px rgba(90,58,70,.08);
-
-    transform: rotate(-1deg);
-}
-
-.photo-frame img {
-    display: block;
-    width: 100%;
-    max-height: 58vh;
-    object-fit: contain;
-    background: #f8eff2;
-}
-
-.photo-frame::after {
-    content: "";
-    position: absolute;
-
-    bottom: 20px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: 70%;
-    height: 1px;
-
-    background: #ead5dc;
-}
-
-.message {
-    width: min(92vw, 690px);
-
-    margin-top: 28px;
-
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(19px, 3vw, 25px);
-    line-height: 1.45;
-
-    color: #654b55;
-
-    white-space: pre-line;
+    background: white;
 }
 
 /* =========================================
@@ -748,50 +962,56 @@ body {
 ========================================= */
 
 .final-container {
-    width: min(92vw, 760px);
+    width: min(93vw, 800px);
     text-align: center;
+    padding: 40px 0;
 }
 
-.final-flower {
-    font-size: 72px;
+.final-symbol {
+    font-size: 65px;
     margin-bottom: 10px;
-    animation: flowerFloat 3s ease-in-out infinite;
+    animation: finalFloat 3s ease-in-out infinite;
 }
 
-@keyframes flowerFloat {
-    0%, 100% {
+@keyframes finalFloat {
+    0%,100% {
         transform: translateY(0);
     }
 
     50% {
-        transform: translateY(-9px);
+        transform: translateY(-8px);
     }
 }
 
 .final-label {
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 4px;
-    color: #ad8390;
-    margin-bottom: 20px;
+    color: #aa7c8a;
+    margin-bottom: 23px;
+    text-transform: uppercase;
 }
 
 .final-message {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(21px, 4vw, 31px);
-    line-height: 1.55;
-    color: #684c58;
+    font-size: clamp(21px, 4vw, 30px);
+    line-height: 1.52;
+    color: #634955;
     white-space: pre-line;
 }
 
-.final-message .ending {
+.latest-message {
+    margin-top: 38px;
+}
+
+.final-ending {
     display: block;
-    margin-top: 30px;
-    color: #9b5f73;
-    font-size: 35px;
+    margin-top: 32px;
+    color: #9d5e73;
+    font-size: clamp(28px, 5vw, 38px);
 }
 
 /* =========================================
-   MUSIC BUTTON
+   MUSIC
 ========================================= */
 
 .music-btn {
@@ -805,11 +1025,10 @@ body {
     border: none;
     border-radius: 50%;
 
-    background: rgba(255,255,255,.8);
-    color: #875d6d;
+    background: rgba(255,255,255,.84);
+    color: #85586b;
 
     cursor: pointer;
-
     z-index: 999;
 
     box-shadow:
@@ -820,18 +1039,17 @@ body {
    FALLING PETALS
 ========================================= */
 
-.petal-fall {
+.falling {
     position: fixed;
     top: -30px;
-
     pointer-events: none;
     z-index: 999;
 
-    animation:
-        fall linear forwards;
+    animation: fall linear forwards;
 }
 
 @keyframes fall {
+
     0% {
         transform:
             translateY(-30px)
@@ -846,7 +1064,7 @@ body {
     100% {
         transform:
             translateY(110vh)
-            translateX(90px)
+            translateX(100px)
             rotate(360deg);
         opacity: 0;
     }
@@ -859,17 +1077,17 @@ body {
 @media (max-width: 600px) {
 
     .screen {
-        padding: 18px 10px;
+        padding: 15px 10px;
     }
 
     .intro-container {
-        min-height: 100vh;
+        padding-top: 10px;
     }
 
-    .bouquet {
-        height: 330px;
+    .bouquet-scene {
+        height: 350px;
         transform: scale(.78);
-        margin-top: -25px;
+        margin-top: -15px;
         margin-bottom: -80px;
     }
 
@@ -878,17 +1096,21 @@ body {
     }
 
     .envelope {
-        width: 235px;
-        height: 150px;
+        width: 240px;
+        height: 155px;
     }
 
     .envelope.open .letter {
-        top: -88px;
+        top: -90px;
     }
 
-    .intro-love-message {
-        font-size: 20px;
-        margin-top: 20px;
+    .letter {
+        width: 195px;
+        left: 22px;
+    }
+
+    .letter-text {
+        font-size: 22px;
     }
 
     .personalized-frame {
@@ -900,12 +1122,8 @@ body {
         max-height: 58vh;
     }
 
-    .personalized-caption {
-        font-size: 19px;
-    }
-
     .photo-frame {
-        padding: 9px 9px 48px;
+        padding: 8px 8px 50px;
     }
 
     .photo-frame img {
@@ -917,12 +1135,17 @@ body {
         line-height: 1.42;
     }
 
-    .final-message {
-        font-size: 21px;
+    .final-container {
+        padding: 25px 0;
     }
 
-    .final-message .ending {
-        font-size: 29px;
+    .final-message {
+        font-size: 21px;
+        line-height: 1.5;
+    }
+
+    .latest-message {
+        margin-top: 30px;
     }
 }
 </style>
@@ -934,118 +1157,164 @@ body {
 
 <audio id="music" src="song.mp3" loop></audio>
 
-<button
-    class="music-btn"
-    id="musicBtn"
-    onclick="toggleMusic()">
-    ♫
-</button>
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">♫</button>
 
 
-<!-- =========================================
+<!-- =====================================================
      PAGE 0 — OPENING
-========================================= -->
+===================================================== -->
 
 <section class="screen active" id="intro">
 
 <div class="intro-container">
 
-    <div class="eyebrow">
+    <div class="intro-small">
         for my palanglang
     </div>
 
     <h1 class="main-title">
-        lovely <span>9 months</span><br>
-        with u ♡
+        <span>9 lovely</span><br>
+        months with u ♡
     </h1>
 
-    <div class="intro-note">
+    <div class="subtitle">
         a little love story of us
     </div>
 
 
-    <!-- 3D BOUQUET -->
+    <!-- REALISTIC BOUQUET -->
 
-    <div class="bouquet">
+    <div class="bouquet-scene">
 
-        <div class="flower flower-pink">
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="flower-center"></div>
-            <div class="stem"></div>
-            <div class="leaf one"></div>
-            <div class="leaf two"></div>
+        <div class="bouquet">
+
+            <!-- stems -->
+
+            <div class="stem s1"></div>
+            <div class="stem s2"></div>
+            <div class="stem s3"></div>
+            <div class="stem s4"></div>
+            <div class="stem s5"></div>
+            <div class="stem s6"></div>
+
+
+            <!-- leaves -->
+
+            <div class="leaf l1"></div>
+            <div class="leaf l2"></div>
+            <div class="leaf l3"></div>
+            <div class="leaf l4"></div>
+            <div class="leaf l5"></div>
+
+
+            <!-- ROSE 1 -->
+
+            <div class="rose pink r1">
+
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+
+                <div class="rose-center"></div>
+
+            </div>
+
+
+            <!-- ROSE 2 -->
+
+            <div class="rose blush r2">
+
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+
+                <div class="rose-center"></div>
+
+            </div>
+
+
+            <!-- ROSE 3 -->
+
+            <div class="rose cream r3">
+
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+
+                <div class="rose-center"></div>
+
+            </div>
+
+
+            <!-- ROSE 4 -->
+
+            <div class="rose peach r4">
+
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+
+                <div class="rose-center"></div>
+
+            </div>
+
+
+            <!-- ROSE 5 -->
+
+            <div class="rose lilac r5">
+
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+                <div class="rose-petal"></div>
+
+                <div class="rose-center"></div>
+
+            </div>
+
+
+            <!-- tiny filler flowers -->
+
+            <div class="filler f1"></div>
+            <div class="filler f2"></div>
+            <div class="filler f3"></div>
+            <div class="filler f4"></div>
+            <div class="filler f5"></div>
+
+
+            <!-- wrapping paper -->
+
+            <div class="wrapper">
+                <div class="ribbon">
+                    <div class="ribbon-knot"></div>
+                </div>
+            </div>
+
         </div>
-
-        <div class="flower flower-white">
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="flower-center"></div>
-            <div class="stem"></div>
-            <div class="leaf one"></div>
-            <div class="leaf two"></div>
-        </div>
-
-        <div class="flower flower-peach">
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="flower-center"></div>
-            <div class="stem"></div>
-            <div class="leaf one"></div>
-            <div class="leaf two"></div>
-        </div>
-
-        <div class="flower flower-lavender">
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="flower-center"></div>
-            <div class="stem"></div>
-            <div class="leaf one"></div>
-            <div class="leaf two"></div>
-        </div>
-
-        <div class="flower flower-rose">
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="flower-center"></div>
-            <div class="stem"></div>
-            <div class="leaf one"></div>
-            <div class="leaf two"></div>
-        </div>
-
-        <div class="wrapper">
-            <div class="wrapper-ribbon"></div>
-            <div class="wrapper-bow"></div>
-        </div>
-
-    </div>
-
-
-    <!-- YOUR NEW MESSAGE -->
-
-    <div class="intro-love-message">
-
-palanglang ko. u are more than anything that other people think of u.
-u are better than anyone i have ever met.
-i want to dream with u, fulfill my dreams wt u.
-i know how much of a gentle and kind person u are.
-u are more than all the voices in ur head.
-i love u truly.
 
     </div>
 
@@ -1076,27 +1345,17 @@ i love u truly.
 
         </div>
 
-        <div
-            class="click-text"
-            id="clickText">
-
+        <div class="click-text" id="clickText">
             open this ♡
-
         </div>
 
     </div>
 
 
-    <div
-        class="bloom-message"
-        id="bloomMessage">
+    <div id="bloomMessage" style="display:none;">
 
-        <button
-            class="next-btn"
-            onclick="goTo(1)">
-
+        <button class="next-btn" onclick="goTo(1)">
             continue ♡
-
         </button>
 
     </div>
@@ -1107,19 +1366,19 @@ i love u truly.
 
 
 
-<!-- =========================================
+<!-- =====================================================
      PAGE 1 — PERSONALIZED IMAGE
-========================================= -->
+===================================================== -->
 
 <section class="screen" id="page1">
 
 <div class="personalized-page">
 
-    <div class="personalized-label">
+    <div class="small-label">
         a little piece of us
     </div>
 
-    <h2 class="personalized-title">
+    <h2 class="page-title">
         just for you ♡
     </h2>
 
@@ -1135,12 +1394,8 @@ i love u truly.
 
     </div>
 
-    <button
-        class="next-btn"
-        onclick="goTo(2)">
-
-        our memories → 
-
+    <button class="next-btn" onclick="goTo(2)">
+        our memories →
     </button>
 
 </div>
@@ -1149,9 +1404,9 @@ i love u truly.
 
 
 
-<!-- =========================================
+<!-- =====================================================
      PAGE 2 — PHOTO 01
-========================================= -->
+===================================================== -->
 
 <section class="screen" id="page2">
 
@@ -1165,14 +1420,12 @@ i love u truly.
 
         <img
             src="01.jpg"
-            alt="our first photo together">
+            alt="first photo together">
 
     </div>
 
     <div class="message">
-
 first photo together, first date din. strangers pa tayo dito, still getting to know the basics, yet u still found a way to hold my hand. i liked it tho. and my first thought during our first date is how much of a cutie u are.
-
     </div>
 
     <button class="next-btn" onclick="goTo(3)">
@@ -1185,9 +1438,9 @@ first photo together, first date din. strangers pa tayo dito, still getting to k
 
 
 
-<!-- =========================================
+<!-- =====================================================
      PAGE 3 — PHOTO 02
-========================================= -->
+===================================================== -->
 
 <section class="screen" id="page3">
 
@@ -1201,14 +1454,12 @@ first photo together, first date din. strangers pa tayo dito, still getting to k
 
         <img
             src="02.jpg"
-            alt="our second photo">
+            alt="second photo">
 
     </div>
 
     <div class="message">
-
 second photo, second date. i found myself smelling your shoulders maya't maya na dito. first time din pinakilala kita kay mama. ang cute cute mo dito, ang pogi pogi pa, mahal na kita agad dito pero natatakot parin ako ng konti.
-
     </div>
 
     <button class="next-btn" onclick="goTo(4)">
@@ -1221,9 +1472,9 @@ second photo, second date. i found myself smelling your shoulders maya't maya na
 
 
 
-<!-- =========================================
+<!-- =====================================================
      PAGE 4 — PHOTO 03
-========================================= -->
+===================================================== -->
 
 <section class="screen" id="page4">
 
@@ -1237,14 +1488,12 @@ second photo, second date. i found myself smelling your shoulders maya't maya na
 
         <img
             src="03.jpg"
-            alt="our third photo">
+            alt="third photo">
 
     </div>
 
     <div class="message">
-
 third photo, naka ilang dates na tayo before this picture. u always loved making sundo of me and watch how 3pp workers gag when they see u hahaha. this was the first time u brought me to ur house. i was so scared pero wala pa pala sina tita at tito kaya okay lang. first bembang din WHAHAHHAHAHAHH.
-
     </div>
 
     <button class="next-btn" onclick="goTo(5)">
@@ -1257,9 +1506,9 @@ third photo, naka ilang dates na tayo before this picture. u always loved making
 
 
 
-<!-- =========================================
+<!-- =====================================================
      PAGE 5 — PHOTO 04
-========================================= -->
+===================================================== -->
 
 <section class="screen" id="page5">
 
@@ -1273,14 +1522,12 @@ third photo, naka ilang dates na tayo before this picture. u always loved making
 
         <img
             src="04.jpg"
-            alt="our first christmas">
+            alt="fourth photo">
 
     </div>
 
     <div class="message">
-
 fourth photo, our first christmas together. after this sinagot na kita kahit di ka naman nag tanong hahahhaha sorry na dali kapa palanglang hahahha. masayang- masaya ako ng time na to. kahit di tayo nakasama sa ilocos trip ng family mo, masaya parin tayo kase magkasama tayo.
-
     </div>
 
     <button class="next-btn" onclick="goTo(6)">
@@ -1293,9 +1540,9 @@ fourth photo, our first christmas together. after this sinagot na kita kahit di 
 
 
 
-<!-- =========================================
+<!-- =====================================================
      PAGE 6 — PHOTO 05
-========================================= -->
+===================================================== -->
 
 <section class="screen" id="page6">
 
@@ -1309,14 +1556,12 @@ fourth photo, our first christmas together. after this sinagot na kita kahit di 
 
         <img
             src="05.jpg"
-            alt="our basketball date">
+            alt="fifth photo">
 
     </div>
 
     <div class="message">
-
-fifth photo, our first "manood ng basketball in person". first time ko din ma experience to and ang best part is ikaw ang kasama ko.
-
+fifth photo, our first  "manood ng basketball in person". first time ko din ma experience to and ang best part is ikaw ang kasama ko.
     </div>
 
     <button class="next-btn" onclick="goTo(7)">
@@ -1329,9 +1574,9 @@ fifth photo, our first "manood ng basketball in person". first time ko din ma ex
 
 
 
-<!-- =========================================
+<!-- =====================================================
      PAGE 7 — PHOTO 06
-========================================= -->
+===================================================== -->
 
 <section class="screen" id="page7">
 
@@ -1345,14 +1590,12 @@ fifth photo, our first "manood ng basketball in person". first time ko din ma ex
 
         <img
             src="06.jpg"
-            alt="one of our favorite photos">
+            alt="sixth photo">
 
     </div>
 
     <div class="message">
-
 sixth photo, one of my favorites. after to kunin nag-away pa tayo, eh kase wala tayo maayos picture together. gusto ko palagi may pic tayo bebe -_-. during this night after away, narealize ko na kahit minsan sobrang maldita ako sayo at sobra akong tinotoyo, pinipilit mo parin akong intindihin. salamat baby kase kahit ako minsan di maintindihan sarili ko and it takes a man who genuinely loves to understand somebody like me.
-
     </div>
 
     <button class="next-btn" onclick="goTo(8)">
@@ -1365,9 +1608,9 @@ sixth photo, one of my favorites. after to kunin nag-away pa tayo, eh kase wala 
 
 
 
-<!-- =========================================
+<!-- =====================================================
      PAGE 8 — PHOTO 07
-========================================= -->
+===================================================== -->
 
 <section class="screen" id="page8">
 
@@ -1381,14 +1624,12 @@ sixth photo, one of my favorites. after to kunin nag-away pa tayo, eh kase wala 
 
         <img
             src="07.jpg"
-            alt="our national museum trip">
+            alt="seventh photo">
 
     </div>
 
     <div class="message">
-
 seventh photo, i loveee. first punta natin together sa national museum, pagod pero worth it. first time ko din makasakay ng train hahahhahh shet thank u baby so much. like ng sinabi mo nung dati, "i can be ur tourguide", and yes u brought me to the places i have never been.
-
     </div>
 
     <button class="next-btn" onclick="goTo(9)">
@@ -1401,9 +1642,9 @@ seventh photo, i loveee. first punta natin together sa national museum, pagod pe
 
 
 
-<!-- =========================================
+<!-- =====================================================
      PAGE 9 — PHOTO 08
-========================================= -->
+===================================================== -->
 
 <section class="screen" id="page9">
 
@@ -1417,14 +1658,12 @@ seventh photo, i loveee. first punta natin together sa national museum, pagod pe
 
         <img
             src="08.jpg"
-            alt="our first hiking experience">
+            alt="eighth photo">
 
     </div>
 
     <div class="message">
-
 eigth photo, first hiking experience together. kapoyyyyyy so much pero enjoy din hahahha. i can't wait to climb bigger and taller mountains with u my palanglang. wala akong gustong ibang kasama kundi ikaw lang.
-
     </div>
 
     <button class="next-btn" onclick="goTo(10)">
@@ -1437,9 +1676,9 @@ eigth photo, first hiking experience together. kapoyyyyyy so much pero enjoy din
 
 
 
-<!-- =========================================
+<!-- =====================================================
      PAGE 10 — PHOTO 09
-========================================= -->
+===================================================== -->
 
 <section class="screen" id="page10">
 
@@ -1453,14 +1692,12 @@ eigth photo, first hiking experience together. kapoyyyyyy so much pero enjoy din
 
         <img
             src="09.jpg"
-            alt="our promise rings">
+            alt="ninth photo">
 
     </div>
 
     <div class="message">
-
 finally, ninth photo, pinakarecent and pinakafave ko. thanks for buying us promise rings. thank u for the flower, and thank u for making me feel so loved.
-
     </div>
 
     <button class="next-btn" onclick="goTo(11)">
@@ -1473,21 +1710,24 @@ finally, ninth photo, pinakarecent and pinakafave ko. thanks for buying us promi
 
 
 
-<!-- =========================================
-     PAGE 11 — FINAL MESSAGE
-========================================= -->
+<!-- =====================================================
+     PAGE 11 — FINAL PAGE
+===================================================== -->
 
 <section class="screen" id="page11">
 
 <div class="final-container">
 
-    <div class="final-flower">
-        💐
+    <div class="final-symbol">
+        ♡
     </div>
 
     <div class="final-label">
-        within those nine months
+        for my palanglang
     </div>
+
+
+    <!-- ORIGINAL FINAL MESSAGE -->
 
     <div class="final-message">
 
@@ -1498,18 +1738,21 @@ mahal kita, at patuloy na mamahalin pa.
 pinagdarasal ko sa Panginoon na He will bless what's ours.
 i really believe in our relationship, in us.
 
-palanglang ko. u are more than anything that other people think of u.
-u are better than anyone i have ever met.
-i want to dream with u, fulfill my dreams wt u.
-i know how much of a gentle and kind person u are.
-u are more than all the voices in ur head.
-i love u truly.
+    </div>
 
-<span class="ending">
-mahala kita, palagi! ♡
-</span>
+
+    <!-- YOUR LATEST MESSAGE — LAST PAGE ONLY -->
+
+    <div class="final-message latest-message">
+
+palanglang ko. u are more than anything that other people think of u. u are better than anyone i have ever met. i want to dream with u, fulfill my dreams wt u. i know how much of a gentle and kind person u are. u are more than all the voices in ur head. i love u truly.
 
     </div>
+
+
+    <span class="final-ending">
+        mahala kita, palagi! ♡
+    </span>
 
 </div>
 
@@ -1533,11 +1776,13 @@ function goTo(number) {
 
     const target =
         number === 0
-            ? document.getElementById("intro")
-            : document.getElementById("page" + number);
+        ? document.getElementById("intro")
+        : document.getElementById("page" + number);
 
     if (target) {
+
         target.classList.add("active");
+
         target.scrollTop = 0;
     }
 
@@ -1546,12 +1791,12 @@ function goTo(number) {
         behavior: "smooth"
     });
 
-    createPetals(16);
+    createPetals(18);
 }
 
 
 /* =========================================
-   OPEN LETTER
+   OPEN ENVELOPE
 ========================================= */
 
 let opened = false;
@@ -1579,9 +1824,12 @@ function openLetter() {
 
     setTimeout(() => {
 
-        createPetals(45);
+        createPetals(50);
 
-        bloomMessage.classList.add("show");
+        bloomMessage.style.display = "block";
+
+        bloomMessage.style.animation =
+            "fadeUp .9s ease";
 
     }, 900);
 }
@@ -1639,6 +1887,7 @@ function toggleMusic() {
 
             })
             .catch(() => {});
+
     }
 }
 
@@ -1652,7 +1901,7 @@ const background =
 
 function createBackgroundHearts() {
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 22; i++) {
 
         const heart =
             document.createElement("div");
@@ -1662,8 +1911,8 @@ function createBackgroundHearts() {
 
         heart.innerHTML =
             Math.random() > .5
-                ? "♡"
-                : "✿";
+            ? "♡"
+            : "✿";
 
         heart.style.left =
             Math.random() * 100 + "%";
@@ -1672,7 +1921,7 @@ function createBackgroundHearts() {
             (12 + Math.random() * 18) + "px";
 
         heart.style.animationDuration =
-            (10 + Math.random() * 14) + "s";
+            (10 + Math.random() * 15) + "s";
 
         heart.style.animationDelay =
             (-Math.random() * 15) + "s";
@@ -1688,12 +1937,12 @@ createBackgroundHearts();
    FALLING PETALS
 ========================================= */
 
-function createPetals(amount = 10) {
+function createPetals(amount = 12) {
 
     const symbols = [
         "♡",
-        "✿",
         "❀",
+        "✿",
         "♥"
     ];
 
@@ -1703,7 +1952,7 @@ function createPetals(amount = 10) {
             document.createElement("div");
 
         petal.className =
-            "petal-fall";
+            "falling";
 
         petal.textContent =
             symbols[
@@ -1741,9 +1990,8 @@ function createPetals(amount = 10) {
 document.addEventListener("keydown", function(e) {
 
     const current =
-        [...pages].findIndex(
-            page =>
-                page.classList.contains("active")
+        [...pages].findIndex(page =>
+            page.classList.contains("active")
         );
 
     if (e.key === "ArrowRight") {
@@ -1787,9 +2035,8 @@ document.addEventListener("touchend", function(e) {
         touchStartX - touchEndX;
 
     const current =
-        [...pages].findIndex(
-            page =>
-                page.classList.contains("active")
+        [...pages].findIndex(page =>
+            page.classList.contains("active")
         );
 
     if (Math.abs(difference) > 70) {
@@ -1811,6 +2058,7 @@ document.addEventListener("touchend", function(e) {
             goTo(current - 1);
 
         }
+
     }
 
 });
